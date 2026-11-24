@@ -50,7 +50,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--sand);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -578,7 +578,7 @@ html.menu-open body {
   position: relative;
   height: clamp(220px, 34vw, 460px);
   overflow: hidden;
-  background: var(--sand);
+  /* background: var(--sand); */
 }
 
 .band img {
