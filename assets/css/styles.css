@@ -255,7 +255,24 @@ h2 {
 }
 
 .lang-switch--header {
-  display: none;
+  display: flex;
+}
+
+@media (max-width: 899px) {
+  .header-actions {
+    gap: 8px;
+  }
+
+  .lang-switch--header a {
+    padding: 6px 5px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .lang-switch--header a[aria-current="true"]::after {
+    left: 5px;
+    right: 5px;
+  }
 }
 
 .menu-toggle {
@@ -327,10 +344,6 @@ h2 {
   .nav-desktop a:hover::after,
   .nav-desktop a.is-active::after {
     transform: scaleX(1);
-  }
-
-  .lang-switch--header {
-    display: flex;
   }
 
   .menu-toggle {
@@ -408,31 +421,6 @@ html.menu-open body {
   color: var(--muted);
   font-size: 10px;
   letter-spacing: 0.14em;
-}
-
-.menu-foot {
-  margin-top: clamp(36px, 8vh, 72px);
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-}
-
-.menu-label {
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.menu-foot .lang-switch a {
-  padding-inline: 0;
-  margin-right: 20px;
-  font-size: 12px;
-}
-
-.menu-foot .lang-switch a[aria-current="true"]::after {
-  left: 0;
-  right: 0;
 }
 
 /* ---------- hero ---------- */
